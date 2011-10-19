@@ -1,17 +1,15 @@
-#Front-End Forumlation
+#Downloadable
 
 ##Overview
 
-This project contains the blank template of what I use for front-end development projects.
-
-__Why formulation?__ Because I've started to dislike the term "boilerplate", and formulation had a nice ring to it.
-
-##What it's built on
-
-Front-End Formulation is based around the SCSS syntax of [SASS](http://www.sass-lang.com) and [Compass](http://compass-style.org/) for assisting in CSS development, [Jammit](http://documentcloud.github.com/jammit/) for JavaScript packaging, and (optionally) [HAML](http://haml-lang.com/) for writing markup.
+__Downloadable__ is a simple, self-hosted site that automates the process of sharing files.  File lists are generated automatically and readme's are read and converted from markdown to offer file descriptions
 
 ##Getting Started
 
-Run `bundle install` to install all necessary gems (see the [Gemfile](https://github.com/markupboy/front-end-forumulation/blob/master/Gemfile) to see what is actually included).
+This project contains all necessary files to build __downloadable__. If you would just like to host a downloadable site, simple copy the contents of the `public` directory to the directory on the server where you would like to host it. 
 
-Run `guard` to begin watching the directory for changes to files handled by compass, jammit, or haml.
+Files should be placed in folders in the `files` directory (although in a later release, this will be user configurable). The name of the folder is what will be displayed in the main listing.  Alongside your files, you can include a `readme.markdown` file (which will be expanded to include less specific names in the future), that will be converted and outputted on the file info screen.
+
+##Working With the Source
+
+If you would like to cusomtize your downloadable site, or would like to contribute to the project, please see my [Front-End Formulation Readme](https://github.com/markupboy/front-end-formulation/blob/master/README.mdown) for instructions on install all of the neessary gems and compiling the CSS and JS.
