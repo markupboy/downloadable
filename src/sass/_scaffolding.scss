@@ -1,0 +1,222 @@
+/* _scaffolding.scss
+ * Basic site structure
+ * -------------------- */
+
+/* @group basic */
+
+body {
+	background: #333;
+	color: #333;
+	overflow-x: hidden;
+	@include sans(normal, 14px, 18px);
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	@include text-shadow(1px 1px 0 #fff);
+	@include transition(background .1s linear, opacity .1s linear);
+}
+
+code {
+	background: #e5e5e5;
+	font-family: monospace;
+}
+
+/* @end */
+
+/* @group container */
+
+.container {
+	background: #f5f5f5;
+	@include border-radius(5px);
+	border-bottom: 2px solid #ccc;
+	border-top: 2px solid #fff;
+	@include box-shadow(0 0 25px rgba(0,0,0,0.5));
+	clear: both;
+	left: 50%;
+	margin: 50px 0 0 -140px;
+	@include opacity(1);
+	padding: 15px 0;
+	position: absolute;
+	@include transition(all .3s linear);
+	width: 250px;
+	
+	&.info {
+		margin-left: -265px;
+		width: 500px;
+	}
+	
+	&.hide {
+		margin-left: -425px;
+		@include opacity(0);
+	}
+	
+	&.hidden {
+		margin-left: 265px;
+		@include opacity(0);
+	}
+	
+	&:hover .close {
+		@include opacity(.8);
+	}
+		
+}
+
+.title {
+	border-bottom: 1px solid #e3e3e3;
+	color: #666;
+	font-weight: 100;
+	padding: 0 25px 15px;
+	@include shorthand(100, 22px, 1);
+	text-align: left;
+}
+
+.files {
+	
+	li {
+		border-bottom: 1px solid #e3e3e3;
+	}
+	
+	a {
+		display: block;
+		padding: 10px 25px;
+		
+		&:hover {
+			background: transparentize(#b9d1e7, 0.5);
+		}
+	}
+}
+
+.button {
+	background: #ddd;
+	@include border-radius(3px);
+	@include box-shadow(0 0 3px rgba(0,0,0,0.2) inset);
+	cursor: pointer;
+	@include inline-block;
+	padding: 6px 9px;
+	@include sans(normal, 12px, 1);
+	text-align: center;
+	text-transform: uppercase;
+	
+	&:hover {
+		background: transparentize(#b9d1e7, 0.5);
+	}
+	
+	&:active {
+		background: transparentize(#3879d9, 0.7);
+	}
+	
+	&.back {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+	}
+}
+
+.download {
+	display: block;
+	@include shorthand(100, 22px, 1.2);
+	margin-top: 25px;
+	
+	strong {
+		color: #000;
+		font-weight: bold;
+		@include transition(color .1s linear);
+	}
+	
+	b {
+		@include background(#000 url(../images/download.png) 0 50% no-repeat);
+		display: block;
+		float: left;
+		margin-right: 5px;
+		@include square(25px);
+		@include transition(background-color .1s linear);
+	}
+	
+	&:hover {
+		strong {
+			color: #3879d9;
+		}
+		
+		b {
+			background-color: #3879d9;
+		}
+	}
+}
+
+.markdown {
+	padding: 25px;
+	@include shorthand(normal, 13px, 18px);
+	
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+	
+	h1 {
+		font-size: 20px;
+	}
+	
+	h2 {
+		font-size: 18px;
+	}
+	
+	h3 {
+		font-size: 16px;
+	}
+	
+	h4 {
+		font-size: 14px;
+	}
+	
+	h6 {
+		font-weight: normal;
+	}
+	
+	p, ul, ol {
+		margin-bottom: 1em;
+	}
+	
+	ul li {
+		margin-bottom: 0.5em;
+		padding-left: 15px;
+		position: relative;
+		
+		&:before {
+			content: "•";
+			color: #777;
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+	}
+	
+	ol {
+		counter-reset: li;
+		margin-left: 0;
+		padding-left: 0;
+	}
+	
+	ol > li {
+		list-style: none;
+		margin-bottom: 0.5em;
+		padding-left: 15px;
+		position: relative;
+	}
+	
+	ol > li:before {
+		@include box-sizing(border-box);
+		color: #777;
+		content: counter(li) ".";
+		counter-increment: li;
+		left: -3px;
+		padding: 2px;
+		position:absolute;
+		@include shorthand(normal, 12px, 1);
+		text-align:center;
+		top: 1px;
+	}
+}
+
+/* @end */

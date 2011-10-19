@@ -1,0 +1,6 @@
+package_path: javascripts/compiled
+
+javascripts:
+  application:
+    - public/javascripts/vendor/jquery.js
+    - public/javascripts/application.js

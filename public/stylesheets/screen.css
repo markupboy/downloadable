@@ -1,0 +1,323 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* _setup.scss
+ * Variables, defaults and mixins
+ * ------------------------------ */
+/* @group variables */
+/* @end */
+/* @group defaults */
+/* @end */
+/* @group mixings */
+/* @end */
+/* _scaffolding.scss
+ * Basic site structure
+ * -------------------- */
+/* @group basic */
+body {
+  background: #333;
+  color: #333;
+  overflow-x: hidden;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 white;
+  -moz-transition: background 0.1s linear, opacity 0.1s linear;
+  -webkit-transition: background 0.1s linear, opacity 0.1s linear;
+  -o-transition: background 0.1s linear, opacity 0.1s linear;
+  transition: background 0.1s linear, opacity 0.1s linear;
+}
+
+code {
+  background: #e5e5e5;
+  font-family: monospace;
+}
+
+/* @end */
+/* @group container */
+.container {
+  background: #f5f5f5;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #fff;
+  -moz-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  clear: both;
+  left: 50%;
+  margin: 50px 0 0 -140px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  padding: 15px 0;
+  position: absolute;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  width: 250px;
+}
+.container.info {
+  margin-left: -265px;
+  width: 500px;
+}
+.container.hide {
+  margin-left: -425px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.container.hidden {
+  margin-left: 265px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.container:hover .close {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+.title {
+  border-bottom: 1px solid #e3e3e3;
+  color: #666;
+  font-weight: 100;
+  padding: 0 25px 15px;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1;
+  text-align: left;
+}
+
+.files li {
+  border-bottom: 1px solid #e3e3e3;
+}
+.files a {
+  display: block;
+  padding: 10px 25px;
+}
+.files a:hover {
+  background: rgba(185, 209, 231, 0.5);
+}
+
+.button {
+  background: #ddd;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+  -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+  cursor: pointer;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  padding: 6px 9px;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+.button {
+  *display: inline;
+}
+.button:hover {
+  background: rgba(185, 209, 231, 0.5);
+}
+.button:active {
+  background: rgba(56, 121, 217, 0.3);
+}
+.button.back {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.download {
+  display: block;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-top: 25px;
+}
+.download strong {
+  color: #000;
+  font-weight: bold;
+  -moz-transition: color 0.1s linear;
+  -webkit-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+.download b {
+  background: black url(../images/download.png) 0 50% no-repeat;
+  display: block;
+  float: left;
+  margin-right: 5px;
+  height: 25px;
+  width: 25px;
+  -moz-transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+.download:hover strong {
+  color: #3879d9;
+}
+.download:hover b {
+  background-color: #3879d9;
+}
+
+.markdown {
+  padding: 25px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.markdown h1 {
+  font-size: 20px;
+}
+.markdown h2 {
+  font-size: 18px;
+}
+.markdown h3 {
+  font-size: 16px;
+}
+.markdown h4 {
+  font-size: 14px;
+}
+.markdown h6 {
+  font-weight: normal;
+}
+.markdown p, .markdown ul, .markdown ol {
+  margin-bottom: 1em;
+}
+.markdown ul li {
+  margin-bottom: 0.5em;
+  padding-left: 15px;
+  position: relative;
+}
+.markdown ul li:before {
+  content: "•";
+  color: #777;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.markdown ol {
+  counter-reset: li;
+  margin-left: 0;
+  padding-left: 0;
+}
+.markdown ol > li {
+  list-style: none;
+  margin-bottom: 0.5em;
+  padding-left: 15px;
+  position: relative;
+}
+.markdown ol > li:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #777;
+  content: counter(li) ".";
+  counter-increment: li;
+  left: -3px;
+  padding: 2px;
+  position: absolute;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  top: 1px;
+}
+
+/* @end */
+/* _type.scss
+ * Fonts, headings, body text, etc.
+ * -------------------------------- */
+/* @group fonts */
+/* @end */
+/* _forms.scss
+ * Styles for common and specific forms and form elements
+ * ------------------------------------------------------ */
+/* _patterns.scss
+ * Repeatable UI elements, location agnostic
+ * ----------------------------------------- */
+/* _debug.scss
+ * Debug styles - NOT TO BE USED IN PRODUCTION
+ * ------------------------------------------- */
