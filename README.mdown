@@ -6,7 +6,7 @@ __Downloadable__ is a simple, self-hosted site that automates the process of sha
 
 ##Getting Started
 
-This project contains all necessary files to build __downloadable__. If you would just like to host a downloadable site, simple copy the contents of the `public` directory to the directory on the server where you would like to host it. 
+This project contains all necessary files to build __downloadable__. If you would just like to host a downloadable site, simply [download the standalone site](https://github.com/markupboy/front-end-formulation/downloads) and copy that archive's contents to the directory on the server where you would like to host it. 
 
 Files should be placed in folders in the `files` directory (although in a later release, this will be user configurable). The name of the folder is what will be displayed in the main listing.  Alongside your files, you can include a `readme.markdown` file (which will be expanded to include less specific names in the future), that will be converted and outputted on the file info screen.
 
